@@ -11,6 +11,8 @@ import QUESTION_TEXT from './data/questions.json'
 import CHOICE_TEXT from './data/choices.json'
 import ANSWER_TEXT from './data/answers.json'
 
+const TITLE = '🎅🏻🎄 SAMBLA GROUP DEV CHRISTMAS QUIZ 🎄🎅🏻\n';
+
 let playerName;
 let score = 0;
 
@@ -18,12 +20,12 @@ const sleep = (ms = 3000) => new Promise((r) => setTimeout(r, ms));
 
 const start = async () => {
   console.clear();
-  const title = chalkAnimation.neon('🎅🏻🎄 SAMBLA GROUP DEV CHRISTMAS QUIZ 🎄🎅🏻 \n');
+  const title = chalkAnimation.neon(TITLE);
   await sleep();
   title.stop();
 
   console.log(`
-    ${chalk.bgBlue('HOW TO PLAY')}
+    ${chalk.bgBlue('HOW TO PLAY\n')}
     Do the quiz, answer the questions.
     Winner gets to sugondeez.
   `);
@@ -47,6 +49,12 @@ const handleAnswer = async (correct) => {
 
   score++;
   return spinner.success({ text: `Good job ${playerName} \n` })
+};
+
+const endQuiz = () => {
+  if (score < 5) console.log(`You score was ${score}! That\'s not very good :(`);
+  if (score > 5 && score < 7) console.log(`You score was ${score}! Not bad!`);
+  if (score > 7) console.log(`You score was ${score}! NOICE ONE BRUV!`);
 };
 
 const question1 = async () => {
@@ -90,5 +98,4 @@ await requestPlayerName();
 await question1();
 await question2();
 await question3();
-
-console.log(score);
+endQuiz();
