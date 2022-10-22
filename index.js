@@ -7,9 +7,7 @@ import chalkAnimation from 'chalk-animation';
 import figlet from 'figlet';
 import { createSpinner } from 'nanospinner';
 
-import QUESTION_TEXT from './data/questions.json'
-import CHOICE_TEXT from './data/choices.json'
-import ANSWER_TEXT from './data/answers.json'
+import questions from './data/questions.json'
 
 const TITLE = '🎅🏻🎄 SAMBLA GROUP DEV CHRISTMAS QUIZ 🎄🎅🏻\n';
 
@@ -35,7 +33,7 @@ const requestPlayerName = async () => {
   const prompt = await inquirer.prompt({
     name: 'player_name',
     type: 'input',
-    message: 'Enter you name',
+    message: 'Enter your name',
   });
 
   playerName = prompt.player_name;
@@ -52,50 +50,32 @@ const handleAnswer = async (correct) => {
 };
 
 const endQuiz = () => {
-  if (score < 5) console.log(`You score was ${score}! That\'s not very good :(`);
-  if (score > 5 && score < 7) console.log(`You score was ${score}! Not bad!`);
-  if (score > 7) console.log(`You score was ${score}! NOICE ONE BRUV!`);
+  if (score < 5) console.log(`Your score was ${score}! That\'s not very good :(`);
+  if (score > 5 && score < 7) console.log(`Your score was ${score}! Not bad!`);
+  if (score > 7) console.log(`Your score was ${score}! NOICE ONE BRUV!`);
 };
 
-const question1 = async () => {
-  const prompt = await inquirer.prompt({
-    name: 'question_1',
-    type: 'list',
-    message: QUESTION_TEXT.question1,
-    choices: CHOICE_TEXT.question1,
-  });
+const question = ({ name, type, message, choices, answer }) => {
+  return async () => {
+    const prompt = await inquirer.prompt({
+      name: name,
+      type: type,
+      message: message,
+      choices: choices,
+    });
 
-  return handleAnswer(prompt.question_1 === ANSWER_TEXT.question1);
-};
-
-
-const question2 = async () => {
-  const prompt = await inquirer.prompt({
-    name: 'question_2',
-    type: 'list',
-    message: QUESTION_TEXT.question2,
-    choices: CHOICE_TEXT.question2,
-  });
-
-  return handleAnswer(prompt.question_2 === ANSWER_TEXT.question2);
+    return handleAnswer(prompt[name] === answer);
+  };
 };
 
 
-const question3 = async () => {
-  const prompt = await inquirer.prompt({
-    name: 'question_3',
-    type: 'list',
-    message: QUESTION_TEXT.question3,
-    choices: CHOICE_TEXT.question3,
-  });
-
-  return handleAnswer(prompt.question_3 === ANSWER_TEXT.question3);
-};
-
+const q1 = question(questions.q1);
+const q2 = question(questions.q2);
 
 await start();
 await requestPlayerName();
-await question1();
-await question2();
-await question3();
+
+await q1();
+await q2();
+
 endQuiz();
