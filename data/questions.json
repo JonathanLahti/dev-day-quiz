@@ -12,5 +12,27 @@
     "message": "1. Who was the winner of the Dev Team Pingis competition?",
     "choices": ["Nazim", "Carlos", "Axel", "Linnea"],
     "answer": "Carlos"
+  },
+  "q3": {
+    "name": "q3",
+    "type": "list",
+    "message": "3. What came first, Sambla or Advisa?",
+    "choices": ["Sambla", "Advisa"],
+    "answer": "Advisa"
+  },
+  "q4": {
+    "name": "q4",
+    "type": "list",
+    "message": "4. Who was the the last developer to be hired by Sambla before the integration with Advisa?",
+    "choices": ["Karl", "Anthony", "Kajsa", "Jonathan", "Nazim"],
+    "answer": "Anthony"
+  },
+  "q5": {
+    "name": "q5",
+    "type": "list",
+    "message": "5. How many offices does Sambla Group currenly operate in Sweden?",
+    "choices": [1, 2, 3, 4],
+    "answer": "Anthony"
   }
+
 }

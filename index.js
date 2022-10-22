@@ -55,27 +55,27 @@ const endQuiz = () => {
   if (score > 7) console.log(`Your score was ${score}! NOICE ONE BRUV!`);
 };
 
-const question = ({ name, type, message, choices, answer }) => {
+const buildQuestion = ({ name, type, message, choices, answer }) => {
   return async () => {
-    const prompt = await inquirer.prompt({
-      name: name,
-      type: type,
-      message: message,
-      choices: choices,
-    });
+    const prompt = await inquirer.prompt({ name, type, message, choices });
 
     return handleAnswer(prompt[name] === answer);
   };
 };
 
-
-const q1 = question(questions.q1);
-const q2 = question(questions.q2);
+const q1 = buildQuestion(questions.q1);
+const q2 = buildQuestion(questions.q2);
+const q3 = buildQuestion(questions.q3);
+const q4 = buildQuestion(questions.q4);
+const q5 = buildQuestion(questions.q5);
 
 await start();
 await requestPlayerName();
 
 await q1();
 await q2();
+await q3();
+await q4();
+await q5();
 
 endQuiz();
