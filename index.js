@@ -23,10 +23,16 @@ const start = async () => {
   title.stop();
 
   console.log(`
-    ${chalk.bgBlue('HOW TO PLAY\n')}
+    ${chalk.bgBlue('HOW TO PLAY')}
     Do the quiz, answer the questions.
     Winner gets to sugondeez.
   `);
+
+  console.log(`
+    ${chalk.bgBlue('RULES')}
+    No googling, no cheating!!
+    (That includes YOU Lorenzo!)
+`);
 };
 
 const requestPlayerName = async () => {
@@ -63,19 +69,13 @@ const buildQuestion = ({ name, type, message, choices, answer }) => {
   };
 };
 
-const q1 = buildQuestion(questions.q1);
-const q2 = buildQuestion(questions.q2);
-const q3 = buildQuestion(questions.q3);
-const q4 = buildQuestion(questions.q4);
-const q5 = buildQuestion(questions.q5);
 
 await start();
 await requestPlayerName();
 
-await q1();
-await q2();
-await q3();
-await q4();
-await q5();
+for (const [key, value] of Object.entries(questions)) {
+  const question = buildQuestion(value);
+  await question();
+}
 
 endQuiz();

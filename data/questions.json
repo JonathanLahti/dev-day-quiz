@@ -9,7 +9,7 @@
   "q2": {
     "name": "q2",
     "type": "list",
-    "message": "1. Who was the winner of the Dev Team Pingis competition?",
+    "message": "2. Who was the winner of the Dev Team Pingis competition?",
     "choices": ["Nazim", "Carlos", "Axel", "Linnea"],
     "answer": "Carlos"
   },
@@ -32,7 +32,7 @@
     "type": "list",
     "message": "5. How many offices does Sambla Group currenly operate in Sweden?",
     "choices": [1, 2, 3, 4],
-    "answer": "Anthony"
+    "answer": 3
   }
 
 }
