@@ -29,10 +29,10 @@ const handleAnswer = async (correct) => {
   const spinner = createSpinner("Checking answer...").start();
   await sleep(1000);
 
-  if (!correct) return spinner.error({ text: `Wrong 💀 \n` });
+  if (!correct) return spinner.error({ text: `Wrong! 💀 \n` });
 
   score++;
-  return spinner.success({ text: `Good job ${playerName} \n` });
+  return spinner.success({ text: `Good job ${playerName}! \n` });
 };
 
 const fakeHack = async () => {
@@ -50,10 +50,10 @@ const fakeHack = async () => {
   spinner.update({ text: "Root access successfully acquired..." });
   await sleep();
 
-  spinner.update({ text: "Scanning search history...." });
+  spinner.update({ text: "Scanning browser history...." });
   await sleep();
 
-  spinner.update({ text: "SUSPICIOUS ACTIVITY FOUND" });
+  spinner.update({ text: chalk.bgRed("SUSPICIOUS ACTIVITY FOUND") });
   await sleep(2000);
 
   spinner.update({
