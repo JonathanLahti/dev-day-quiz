@@ -37,15 +37,15 @@ const handleAnswer = async (correct) => {
 
 const fakeHack = async () => {
   const spinner = createSpinner("Loading...").start();
-  await sleep(3000);
+  await sleep();
 
   spinner.update({
     text: "...I'm not actually doing anything, I just thought the spinner looks cool.",
   });
-  await sleep(3000);
+  await sleep();
 
   spinner.update({ text: "...or am I? 🤔😏" });
-  await sleep(3000);
+  await sleep();
 
   spinner.update({ text: "Root access successfully acquired..." });
   await sleep();
@@ -54,7 +54,7 @@ const fakeHack = async () => {
   await sleep();
 
   spinner.update({ text: chalk.bgRed("SUSPICIOUS ACTIVITY FOUND") });
-  await sleep(2000);
+  await sleep();
 
   spinner.update({
     text: "Sending report to katinka.johansson@samblagroup.com...",
@@ -75,18 +75,25 @@ export const start = async () => {
   title.stop();
 
   console.log(`
-    ${chalk.bgBlue("HOW TO PLAY")}
-    Do the quiz, answer the questions.
-    Winner gets to sugondeez.
+    ${chalk.bgGreen("WELCOME")}
+    Welcome to the Dev Team Christmas Quiz!
   `);
 
   console.log(`
-    ${chalk.bgBlue("RULES")}
+    ${chalk.bgBlue("HOW TO PLAY")}
+    Use the arrow keys to select you answer.
+    j/k keys work too for you Vimlords (Nazim).
+
+    Press Enter to select your answer.
+  `);
+
+  console.log(`
+    ${chalk.bgRed("RULES")}
     No googling, no cheating!!
-    (That includes YOU Lorenzo!)
+    (That includes YOU Lorenzo!) \n
     ${await terminalImage.file("image-mac.png", {
-      width: "12%",
-      height: "12%",
+      width: "10%",
+      height: "10%",
       preserveAspectRatio: false,
     })}
   `);
@@ -111,7 +118,7 @@ export const quiz = async () => {
     await question();
 
     const spinner = createSpinner("Next question...").start();
-    await sleep(3000);
+    await sleep();
     spinner.stop();
     console.clear();
   }
