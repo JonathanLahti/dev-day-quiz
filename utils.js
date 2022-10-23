@@ -1,3 +1,5 @@
+import { supabase } from "./db.js"
+
 import chalk from "chalk";
 import inquirer from "inquirer";
 import gradient from "gradient-string";
@@ -7,6 +9,8 @@ import { createSpinner } from "nanospinner";
 import terminalImage from "terminal-image";
 
 import questions from "./data/questions.json";
+
+console.log(supabase);
 
 const TITLE = "🎅🏻🎄 SAMBLA GROUP DEV CHRISTMAS QUIZ 🎄🎅🏻\n";
 

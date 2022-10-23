@@ -12,8 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@supabase/supabase-js": "^2.0.4",
     "chalk": "^5.1.2",
     "chalk-animation": "^2.0.3",
+    "dotenv": "^16.0.3",
     "figlet": "^1.5.2",
     "gradient-string": "^2.0.2",
     "inquirer": "^9.1.4",
