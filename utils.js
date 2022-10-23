@@ -1,4 +1,4 @@
-import { supabase } from "./db.js"
+import { insertPlayerScore } from "./db.js";
 
 import chalk from "chalk";
 import inquirer from "inquirer";
@@ -10,11 +10,9 @@ import terminalImage from "terminal-image";
 
 import questions from "./data/questions.json";
 
-console.log(supabase);
-
 const TITLE = "🎅🏻🎄 SAMBLA GROUP DEV CHRISTMAS QUIZ 🎄🎅🏻\n";
 
-export const sleep = (ms = 3000) => new Promise((r) => setTimeout(r, ms));
+export const sleep = (ms = 500) => new Promise((r) => setTimeout(r, ms));
 
 let playerName;
 let score = 0;
@@ -60,31 +58,29 @@ const fakeHack = async () => {
   await sleep();
   loadingSpinner.reset();
 
-  const hackSpinner = createSpinner(
-    "Acquiring root access..."
-  ).start();
+  const hackSpinner = createSpinner("Acquiring root access...").start();
   await sleep();
-  hackSpinner.update({ text: "Root access acquired!"});
+  hackSpinner.update({ text: "Root access acquired!" });
   hackSpinner.success();
 
   const browserSpinner = createSpinner("Scanning browser history....").start();
   await sleep();
-  browserSpinner.update({ text: chalk.bgRed("SUSPICIOUS ACTIVITY FOUND!")});
+  browserSpinner.update({ text: chalk.bgRed("SUSPICIOUS ACTIVITY FOUND!") });
   browserSpinner.warn();
 
   const reportSpinner = createSpinner(
     "Sending report to HR:  katinka.johansson@samblagroup.com..."
   ).start();
   await sleep();
-  reportSpinner.update({ text: `Sent! Naughty naughty, ${playerName}.`});
+  reportSpinner.update({ text: `Sent! Naughty naughty, ${playerName}.` });
   reportSpinner.success();
 
   const quizSpinner = createSpinner("Now back to the quiz... 3").start();
   await sleep(1000);
-  quizSpinner.update({ text: "Now back to the quiz... 2"});
+  quizSpinner.update({ text: "Now back to the quiz... 2" });
   await sleep(1000);
-  quizSpinner.update({ text: "Now back to the quiz... 1"});
-  await sleep(1000)
+  quizSpinner.update({ text: "Now back to the quiz... 1" });
+  await sleep(1000);
   quizSpinner.stop();
 
   console.clear();
@@ -149,9 +145,11 @@ export const quiz = async () => {
   }
 };
 
-export const endQuiz = () => {
+export const endQuiz = async () => {
   if (score < 5)
     console.log(`Your score was ${score}! That\'s not very good :(`);
   if (score >= 5 && score < 7) console.log(`Your score was ${score}! Not bad!`);
   if (score >= 7) console.log(`Your score was ${score}! NOICE ONE BRUV!`);
+
+  await insertPlayerScore(playerName, score);
 };
