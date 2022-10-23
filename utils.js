@@ -34,16 +34,16 @@ const handleAnswer = async (correct) => {
 };
 
 const fakeHack = async () => {
-  const loadingSpinner = createSpinner("Loading...").start();
+  const loadingSpinner = createSpinner("Loading quiz...").start();
   await sleep();
 
   loadingSpinner.update({
-    text: "I don't need to load here...",
+    text: "I don't really need to load here...",
   });
   await sleep();
 
   loadingSpinner.update({
-    text: "I just like the spinner animation...",
+    text: "<------ I just like this spinning animation... look at it go!",
   });
   await sleep();
 
@@ -69,7 +69,7 @@ const fakeHack = async () => {
   browserSpinner.warn();
 
   const reportSpinner = createSpinner(
-    "Sending report to katinka.johansson@samblagroup.com..."
+    "Sending report to HR:  katinka.johansson@samblagroup.com..."
   ).start();
   await sleep();
   reportSpinner.update({ text: `Sent! Naughty naughty, ${playerName}.`});
@@ -124,7 +124,10 @@ export const requestPlayerName = async () => {
     message: "Enter your name to begin:",
   });
 
+  if (!prompt.player_name) return requestPlayerName();
+
   playerName = prompt.player_name;
+
   console.clear();
 
   await fakeHack();

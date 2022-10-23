@@ -33,6 +33,26 @@
     "message": "5. How many offices does Sambla Group currenly operate in Sweden?",
     "choices": [1, 2, 3, 4],
     "answer": 3
+  },
+  "q6": {
+    "name": "q6",
+    "type": "list",
+    "message": "6. In JavaScript, is '' (empty string) truthy or falsy?",
+    "choices": ["truthy", "falsy"],
+    "answer": "falsy"
+  },
+  "q7": {
+    "name": "q7",
+    "type": "list",
+    "message": "7. In JavaScript, what is the output of the following statement?\n\n\tconsole.log(('b' + 'a' + + 'a' + 'a').toLowerCase());\n",
+    "choices": ["baaaa", "ba aa", "banana", "Uncaught SyntaxError: Unexpected token '+'"],
+    "answer": "banana"
+  },
+  "q8": {
+    "name": "q8",
+    "type": "list",
+    "message": "8. We all miss Marcus from the Core team, but what is the delicous dutch treat Tiago cannot get enough of?",
+    "choices": ["Neuken in de keuken", "Stroopwafel", "Bossche bol", "Gevulde speculaas"],
+    "answer": "Stroopwafel"
   }
-
 }
