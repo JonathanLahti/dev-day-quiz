@@ -8,14 +8,12 @@ import terminalImage from "terminal-image";
 
 import questions from "./data/questions.json";
 
-
 const TITLE = "🎅🏻🎄 SAMBLA GROUP DEV CHRISTMAS QUIZ 🎄🎅🏻\n";
 
 export const sleep = (ms = 3000) => new Promise((r) => setTimeout(r, ms));
 
 let playerName;
 let score = 0;
-
 
 const buildQuestion = ({ name, type, message, choices, answer }) => {
   return async () => {
@@ -36,35 +34,55 @@ const handleAnswer = async (correct) => {
 };
 
 const fakeHack = async () => {
-  const spinner = createSpinner("Loading...").start();
+  const loadingSpinner = createSpinner("Loading...").start();
   await sleep();
 
-  spinner.update({
-    text: "...I'm not actually doing anything, I just thought the spinner looks cool.",
+  loadingSpinner.update({
+    text: "I don't need to load here...",
   });
   await sleep();
 
-  spinner.update({ text: "...or am I? 🤔😏" });
-  await sleep();
-
-  spinner.update({ text: "Root access successfully acquired..." });
-  await sleep();
-
-  spinner.update({ text: "Scanning browser history...." });
-  await sleep();
-
-  spinner.update({ text: chalk.bgRed("SUSPICIOUS ACTIVITY FOUND") });
-  await sleep();
-
-  spinner.update({
-    text: "Sending report to katinka.johansson@samblagroup.com...",
+  loadingSpinner.update({
+    text: "I just like the spinner animation...",
   });
   await sleep();
 
-  spinner.update({ text: "Ok, now back to the quiz!" });
+  loadingSpinner.update({
+    text: "This is not actually doing anything...",
+  });
   await sleep();
 
-  spinner.stop();
+  loadingSpinner.update({ text: "...or is it? 🤔😏" });
+  await sleep();
+  loadingSpinner.reset();
+
+  const hackSpinner = createSpinner(
+    "Acquiring root access..."
+  ).start();
+  await sleep();
+  hackSpinner.update({ text: "Root access acquired!"});
+  hackSpinner.success();
+
+  const browserSpinner = createSpinner("Scanning browser history....").start();
+  await sleep();
+  browserSpinner.update({ text: chalk.bgRed("SUSPICIOUS ACTIVITY FOUND!")});
+  browserSpinner.warn();
+
+  const reportSpinner = createSpinner(
+    "Sending report to katinka.johansson@samblagroup.com..."
+  ).start();
+  await sleep();
+  reportSpinner.update({ text: `Sent! Naughty naughty, ${playerName}.`});
+  reportSpinner.success();
+
+  const quizSpinner = createSpinner("Now back to the quiz... 3").start();
+  await sleep(1000);
+  quizSpinner.update({ text: "Now back to the quiz... 2"});
+  await sleep(1000);
+  quizSpinner.update({ text: "Now back to the quiz... 1"});
+  await sleep(1000)
+  quizSpinner.stop();
+
   console.clear();
 };
 
@@ -130,4 +148,3 @@ export const endQuiz = () => {
   if (score >= 5 && score < 7) console.log(`Your score was ${score}! Not bad!`);
   if (score >= 7) console.log(`Your score was ${score}! NOICE ONE BRUV!`);
 };
-
