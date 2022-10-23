@@ -12,5 +12,20 @@ export const insertPlayerScore = async (playerName, score) => {
     .from("dev_quiz")
     .insert([{ player_name: playerName, player_score: score }]);
 
-  if (!error) console.log(error);
+  if (error) console.log(error);
+};
+
+export const getRankings = async () => {
+  let { data: dev_quiz, error } = await supabase
+    .from("dev_quiz")
+    .select("player_name, player_score")
+    .order("player_score", { ascending: false });
+
+    if (error) {
+      console.log(error);
+      return;
+    }
+
+
+  return dev_quiz;
 };

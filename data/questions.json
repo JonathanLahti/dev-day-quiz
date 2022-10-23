@@ -54,5 +54,26 @@
     "message": "8. We all miss Marcus from the Core team, but what is the delicous dutch treat Tiago cannot get enough of?",
     "choices": ["Neuken in de keuken", "Stroopwafel", "Bossche bol", "Gevulde speculaas"],
     "answer": "Stroopwafel"
+  },
+  "q9": {
+    "name": "q9",
+    "type": "list",
+    "message": "9. In the SE market, how many creditors do we have?",
+    "choices": [10, 69, 18, 420],
+    "answer": 18
+  },
+  "q10": {
+    "name": "q10",
+    "type": "list",
+    "message": "What port does crm-frontend run on?",
+    "choices": [9021, 8003, 9019, 2017],
+    "answer": 9021
+  },
+  "q11": {
+    "name": "q10",
+    "type": "list",
+    "message": "In CRM, we use Mongoose as our ODM, what we use as are ORM in Core services?",
+    "choices": ["Sequelize", "MikroORM", "Prisma", "Bookshelf"],
+    "answer": "Bookshelf"
   }
 }

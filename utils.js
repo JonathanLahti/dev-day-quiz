@@ -1,4 +1,4 @@
-import { insertPlayerScore } from "./db.js";
+import { getRankings, insertPlayerScore } from "./db.js";
 
 import chalk from "chalk";
 import inquirer from "inquirer";
@@ -152,4 +152,10 @@ export const endQuiz = async () => {
   if (score >= 7) console.log(`Your score was ${score}! NOICE ONE BRUV!`);
 
   await insertPlayerScore(playerName, score);
+};
+
+export const showRankings = async () => {
+  const data = await getRankings();
+
+  console.table(data);
 };
