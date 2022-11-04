@@ -163,7 +163,7 @@ export const questions = {
   "q24": {
     "name": "q24",
     "type": "list",
-    "message": "Our configuration tool is Super, in what programming language was it it coded in?",
+    "message": "Our configuration tool is Super, in what programming language was it coded in?",
     "choices": ["JavaScript", "C", "Go", "Rust", "LiveScript", "Python"],
     "answer": "LiveScript"
   },
@@ -198,7 +198,7 @@ export const questions = {
   "q29": {
     "name": "q29",
     "type": "list",
-    "message": "We have a plaque on the wall in the pool table room, which tech company's sucess does it reference?",
+    "message": "We have a plaque on the wall in the pool table room, which tech company's success does it reference?",
     "choices": ["Klarna", "Google", "Spotify", "King"],
     "answer": "Spotify"
   },
