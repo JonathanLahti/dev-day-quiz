@@ -6,7 +6,7 @@ import chalkAnimation from "chalk-animation";
 import { createSpinner } from "nanospinner";
 import terminalImage from "terminal-image";
 
-import questions from "./data/questions.json";
+import { questions } from "./data/questions.js";
 
 const TITLE = "🔥🚀🍻 SAMBLA GROUP DEV-DAY QUIZ 🍻🚀🔥\n";
 

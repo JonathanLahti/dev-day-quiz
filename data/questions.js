@@ -1,4 +1,4 @@
-{
+export const questions = {
   "q1": {
     "name": "q1",
     "type": "list",
