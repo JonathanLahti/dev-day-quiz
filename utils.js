@@ -10,9 +10,9 @@ import terminalImage from "terminal-image";
 
 import questions from "./data/questions.json";
 
-const TITLE = "🎅🏻🎄 SAMBLA GROUP DEV CHRISTMAS QUIZ 🎄🎅🏻\n";
+const TITLE = "🔥🚀🍻 SAMBLA GROUP DEV-DAY QUIZ 🍻🚀🔥\n";
 
-export const sleep = (ms = 500) => new Promise((r) => setTimeout(r, ms));
+export const sleep = (ms = 3000) => new Promise((r) => setTimeout(r, ms));
 
 let playerName;
 let score = 0;
@@ -147,7 +147,7 @@ export const quiz = async () => {
 
 export const endQuiz = async () => {
   if (score < 5)
-    console.log(`Your score was ${score}! That\'s not very good :(`);
+    console.log(`Your score was ${score}! That's not very good :(`);
   if (score >= 5 && score < 7) console.log(`Your score was ${score}! Not bad!`);
   if (score >= 7) console.log(`Your score was ${score}! NOICE ONE BRUV!`);
 
