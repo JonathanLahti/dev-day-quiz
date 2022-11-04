@@ -2,9 +2,7 @@ import { getRankings, insertPlayerScore } from "./db.js";
 
 import chalk from "chalk";
 import inquirer from "inquirer";
-import gradient from "gradient-string";
 import chalkAnimation from "chalk-animation";
-import figlet from "figlet";
 import { createSpinner } from "nanospinner";
 import terminalImage from "terminal-image";
 
