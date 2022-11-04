@@ -115,7 +115,7 @@ export const start = async () => {
   `);
 
   console.log(`
-    ${chalk.bgWhite("NOTE")}
+    ${chalk.bgMagenta("NOTE")}
     Try not to hit enter more than once, or when
     the question is loading, otherwise it will submit
     the question before you have time to read it.
