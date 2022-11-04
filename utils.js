@@ -105,6 +105,8 @@ export const start = async () => {
 
     Press Enter to select your answer.
 
+    The next question will load automatically on sumbit.
+
     A leaderboard will be shown at the end of the quiz. 🏆
   `);
 
