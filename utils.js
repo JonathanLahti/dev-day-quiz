@@ -12,7 +12,7 @@ import questions from "./data/questions.json";
 
 const TITLE = "🔥🚀🍻 SAMBLA GROUP DEV-DAY QUIZ 🍻🚀🔥\n";
 
-export const sleep = (ms = 100) => new Promise((r) => setTimeout(r, ms));
+export const sleep = (ms = 3000) => new Promise((r) => setTimeout(r, ms));
 
 let playerName;
 let score = 0;

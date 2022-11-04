@@ -59,15 +59,15 @@
     "name": "q9",
     "type": "list",
     "message": "9. In the SE market, how many creditors do we have?",
-    "choices": [10, 69, 33, 420],
-    "answer": 18
+    "choices": [10, 29, 33, 69],
+    "answer": 33
   },
   "q10": {
     "name": "q10",
     "type": "list",
     "message": "What port does crm-frontend run on?",
     "choices": [9021, 8003, 9019, 2017],
-    "answer": 9021
+    "answer": 9019
   },
   "q11": {
     "name": "q11",
@@ -100,7 +100,7 @@
   "q15": {
     "name": "q15",
     "type": "list",
-    "message": "Axel is the defacto loudest in the office, he is also the tallest, how tall is he in cm?",
+    "message": "Axel is the loudest in the office, he is also the tallest, how tall is he in cm?",
     "choices": [198, 202, 211, 204],
     "answer": 204
   },
@@ -163,9 +163,9 @@
   "q24": {
     "name": "q24",
     "type": "list",
-    "message": "16:00 on Fridays is Beer O'Clock, what was Advisa's previous Beer O'Clock time?",
-    "choices": ["17:00", "14:00", "12:00", "15:00", "08:00"],
-    "answer": "15:00"
+    "message": "Our configuration tool is Super, in what programming language was it it coded in?",
+    "choices": ["JavaScript", "C", "Go", "Rust", "LiveScript", "Python"],
+    "answer": "LiveScript"
   },
   "q25": {
     "name": "q25",
