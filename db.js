@@ -3,23 +3,23 @@ dotenv.config();
 
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = "https://igglygwqxxrpqezogysi.supabase.co";
-const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseUrl = "https://sethfccmmlalsogwkvov.supabase.co";
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNldGhmY2NtbWxhbHNvZ3drdm92Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njc1NTQ4MDMsImV4cCI6MTk4MzEzMDgwM30.HFs9jNRPXK7d3sSYi0Qm6Rn5QQP1e5sbWWHfmLl5bu4';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export const insertPlayerScore = async (playerName, score) => {
   const { data, error } = await supabase
-    .from("dev_quiz")
-    .insert([{ player_name: playerName, player_score: score }]);
+    .from("quiz")
+    .insert([{ player: playerName, score: score }]);
 
   if (error) console.log(error);
 };
 
 export const getRankings = async () => {
-  let { data: dev_quiz, error } = await supabase
-    .from("dev_quiz")
-    .select("player_name, player_score")
-    .order("player_score", { ascending: false });
+  let { data: quiz, error } = await supabase
+    .from("quiz")
+    .select("player, score")
+    .order("score", { ascending: false });
 
     if (error) {
       console.log(error);
@@ -27,5 +27,5 @@ export const getRankings = async () => {
     }
 
 
-  return dev_quiz;
+  return quiz;
 };

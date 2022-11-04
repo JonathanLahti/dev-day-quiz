@@ -70,7 +70,7 @@
     "answer": 9021
   },
   "q11": {
-    "name": "q10",
+    "name": "q11",
     "type": "list",
     "message": "In CRM, we use Mongoose as our ODM, what we use as are ORM in Core services?",
     "choices": ["Sequelize", "MikroORM", "Prisma", "Bookshelf"],
