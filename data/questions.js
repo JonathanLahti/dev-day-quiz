@@ -93,14 +93,14 @@ export const questions = {
   "q14": {
     "name": "q14",
     "type": "list",
-    "message": "Everyone is partial to a bit of pingis now and then, but who is the most observant? How many holes are there in the pingis net?",
+    "message": "How many holes are there in the office pingis net?",
     "choices": [0, 4, 8, 10],
     "answer": 8
   },
   "q15": {
     "name": "q15",
     "type": "list",
-    "message": "Axel is the loudest in the office, he is also the tallest, how tall is he in cm?",
+    "message": "Axel is the loudest in the office and is also the tallest, how tall is he? (in cm)",
     "choices": [198, 202, 211, 204],
     "answer": 204
   },
