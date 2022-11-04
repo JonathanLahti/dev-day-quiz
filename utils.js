@@ -26,7 +26,7 @@ const handleAnswer = async (correct) => {
   const spinner = createSpinner("Checking answer...").start();
   await sleep(1000);
 
-  if (!correct) return spinner.error({ text: `Wrong! 💀 \n` });
+  if (!correct) return spinner.error({ text: `💀 Wrong! ⛔️ \n` });
 
   score++;
   return spinner.success({ text: `Good job ${playerName}! \n` });
@@ -100,6 +100,8 @@ export const start = async () => {
     j/k keys work too for you Vimlords (Nazim).
 
     Press Enter to select your answer.
+
+    A leaderboard will be shown at the end of the quiz. 🏆
   `);
 
   console.log(`
@@ -107,6 +109,15 @@ export const start = async () => {
     No googling, no cheating!!
     (That includes YOU Lorenzo!) \n
   `);
+
+  console.log(`
+    ${chalk.bgWhite("NOTE")}
+    Try not to hit enter more than once, or when
+    the question is loading, otherwise it will submit
+    the question before you have time to read it.
+
+    It's a bug I'm too lazy to fix. \n
+`);
 };
 
 export const requestPlayerName = async () => {
