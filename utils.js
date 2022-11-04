@@ -107,7 +107,7 @@ export const start = async () => {
 
     The next question will load automatically on sumbit.
 
-    A leaderboard will be shown at the end of the quiz. 🏆
+    A leaderboard will be shown at the end of the quiz. 🏆  \n
   `);
 
   console.log(`
