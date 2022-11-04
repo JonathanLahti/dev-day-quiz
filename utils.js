@@ -29,7 +29,7 @@ const handleAnswer = async (correct) => {
   if (!correct) return spinner.error({ text: `💀 Wrong! ⛔️ \n` });
 
   score++;
-  return spinner.success({ text: `Good job ${playerName}! \n` });
+  return spinner.success({ text: `Correct! Bra jobbat ${playerName}! \n` });
 };
 
 const fakeHack = async () => {
@@ -72,7 +72,11 @@ const fakeHack = async () => {
   reportSpinner.update({ text: `Sent! Naughty naughty, ${playerName}.` });
   reportSpinner.success();
 
-  const quizSpinner = createSpinner("Now back to the quiz... 3").start();
+  const quizSpinner = createSpinner("Now back to the quiz... 5").start();
+  await sleep(1000);
+  quizSpinner.update({ text: "Now back to the quiz... 4" });
+  await sleep(1000);
+  quizSpinner.update({ text: "Now back to the quiz... 3" });
   await sleep(1000);
   quizSpinner.update({ text: "Now back to the quiz... 2" });
   await sleep(1000);
