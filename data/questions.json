@@ -59,7 +59,7 @@
     "name": "q9",
     "type": "list",
     "message": "9. In the SE market, how many creditors do we have?",
-    "choices": [10, 69, 18, 420],
+    "choices": [10, 69, 33, 420],
     "answer": 18
   },
   "q10": {
@@ -75,5 +75,138 @@
     "message": "In CRM, we use Mongoose as our ODM, what we use as are ORM in Core services?",
     "choices": ["Sequelize", "MikroORM", "Prisma", "Bookshelf"],
     "answer": "Bookshelf"
+  },
+  "q12": {
+    "name": "q12",
+    "type": "list",
+    "message": "How many repos do we have in the Sambla Group Org?",
+    "choices": [139, 45, 235, 228],
+    "answer": 235
+  },
+  "q13": {
+    "name": "q13",
+    "type": "list",
+    "message": "Who made the latest commit in dev-docker?",
+    "choices": ["Diego", "Andreas", "Alex", "Tiago"],
+    "answer": "Alex"
+  },
+  "q14": {
+    "name": "q14",
+    "type": "list",
+    "message": "Everyone is partial to a bit of pingis now and then, but who is the most observant? How many holes are there in the pingis net?",
+    "choices": [0, 4, 8, 10],
+    "answer": 8
+  },
+  "q15": {
+    "name": "q15",
+    "type": "list",
+    "message": "Axel is the defacto loudest in the office, he is also the tallest, how tall is he in cm?",
+    "choices": [198, 202, 211, 204],
+    "answer": 204
+  },
+  "q16": {
+    "name": "q16",
+    "type": "list",
+    "message": "Conversely, who is the smallest?",
+    "choices": ["Kani", "Yasmine"],
+    "answer": "Kani"
+  },
+  "q17": {
+    "name": "q17",
+    "type": "list",
+    "message": "Back to pingis, how many rackets to we have in the office?",
+    "choices": [9, 10, 7, 6],
+    "answer": 7
+  },
+  "q18": {
+    "name": "q18",
+    "type": "list",
+    "message": "Who is the newest recruit in Dev",
+    "choices": ["Fredrik Chahine", "Miguel Lopes", "Niall Thurrat", "Johan Bergdorf"],
+    "answer": "Niall Thurrat"
+  },
+  "q19": {
+    "name": "q19",
+    "type": "list",
+    "message": "How many members are there in martech?",
+    "choices": [5, 11, 9, 10],
+    "answer": 11
+  },
+  "q20": {
+    "name": "q20",
+    "type": "list",
+    "message": "What is the superior text editor?",
+    "choices": ["Vim", "VsCode", "Notepad++", "Emacs", "Nano", "Dreamweaver"],
+    "answer": "Vim"
+  },
+  "q21": {
+    "name": "q21",
+    "type": "list",
+    "message": "What was the last country to join the EU?",
+    "choices": ["Croatia", "Serbia", "Romainia", "INGERRRRLAND"],
+    "answer": "Croatia"
+  },
+  "q22": {
+    "name": "q22",
+    "type": "list",
+    "message": "Whilst on the topic of geopolitics, which country does our VPN route our traffic through?",
+    "choices": ["China", "Poland", "Ireland", "INGERRRRLAND", "Germany"],
+    "answer": "Ireland"
+  },
+  "q23": {
+    "name": "q23",
+    "type": "list",
+    "message": "16:00 on Fridays is Beer O'Clock, what was Advisa's previous Beer O'Clock time?",
+    "choices": ["17:00", "14:00", "12:00", "15:00", "08:00"],
+    "answer": "15:00"
+  },
+  "q24": {
+    "name": "q24",
+    "type": "list",
+    "message": "16:00 on Fridays is Beer O'Clock, what was Advisa's previous Beer O'Clock time?",
+    "choices": ["17:00", "14:00", "12:00", "15:00", "08:00"],
+    "answer": "15:00"
+  },
+  "q25": {
+    "name": "q25",
+    "type": "list",
+    "message": "How many brains does an octopus have? 🐙",
+    "choices": [9, 8, 1, 3, 0],
+    "answer": 9
+  },
+  "q26": {
+    "name": "q26",
+    "type": "list",
+    "message": "How many hearts does an octopus have? 🐙",
+    "choices": [9, 8, 1, 3, 0],
+    "answer": 3
+  },
+  "q27": {
+    "name": "q27",
+    "type": "list",
+    "message": "What is the code to the door downstairs",
+    "choices": [6061, 1052, 4466, 5791],
+    "answer": 5791
+  },
+  "q28": {
+    "name": "q28",
+    "type": "list",
+    "message": "What is the company name of our office neighbours?",
+    "choices": ["Potter Clarkson", "Fredrik & Sons", "Fiedler & Lundgren", "Mondido Payments"],
+    "answer": "Potter Clarkson"
+  },
+  "q29": {
+    "name": "q29",
+    "type": "list",
+    "message": "We have a plaque on the wall in the pool table room, which tech company's sucess does it reference?",
+    "choices": ["Klarna", "Google", "Spotify", "King"],
+    "answer": "Spotify"
+  },
+  "q30": {
+    "name": "q29",
+    "type": "list",
+    "message": "Who's the best looking and 'goodest of boys' in the office?",
+    "choices": ["Axel Ferb", "Milo"],
+    "answer": "Milo"
   }
 }
