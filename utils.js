@@ -4,7 +4,6 @@ import chalk from "chalk";
 import inquirer from "inquirer";
 import chalkAnimation from "chalk-animation";
 import { createSpinner } from "nanospinner";
-import terminalImage from "terminal-image";
 
 import { questions } from "./data/questions.js";
 
@@ -107,11 +106,6 @@ export const start = async () => {
     ${chalk.bgRed("RULES")}
     No googling, no cheating!!
     (That includes YOU Lorenzo!) \n
-    ${await terminalImage.file("image-mac.png", {
-      width: "10%",
-      height: "10%",
-      preserveAspectRatio: false,
-    })}
   `);
 };
 
